@@ -1,0 +1,11 @@
+BasedOnStyle: Google
+IndentWidth: 4
+
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html#binpackparameters
+BinPackParameters: AlwaysOnePerLine
+
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html#alignafteropenbracket
+AlignAfterOpenBracket: BlockIndent
+
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html#allowallparametersofdeclarationonnextline
+AllowAllParametersOfDeclarationOnNextLine: false
