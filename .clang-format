@@ -4,8 +4,17 @@ IndentWidth: 4
 # https://clang.llvm.org/docs/ClangFormatStyleOptions.html#binpackparameters
 BinPackParameters: AlwaysOnePerLine
 
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html#binpackarguments
+BinPackArguments: false
+
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html#allowallargumentsonnextline
+AllowAllArgumentsOnNextLine: false
+
 # https://clang.llvm.org/docs/ClangFormatStyleOptions.html#alignafteropenbracket
 AlignAfterOpenBracket: BlockIndent
 
 # https://clang.llvm.org/docs/ClangFormatStyleOptions.html#allowallparametersofdeclarationonnextline
 AllowAllParametersOfDeclarationOnNextLine: false
+
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html#breakfunctiondefinitionparameters
+BreakFunctionDefinitionParameters: true

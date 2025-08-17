@@ -35,7 +35,12 @@ internal void Win32ResizeDIBSection(
     BitmapInfo.bmiHeader.biCompression = BI_RGB;
 
     BitmapHandle = CreateDIBSection(
-        BitmapDeviceContext, &BitmapInfo, DIB_RGB_COLORS, &BitmapMemory, 0, 0
+        BitmapDeviceContext,
+        &BitmapInfo,
+        DIB_RGB_COLORS,
+        &BitmapMemory,
+        0,
+        0
     );
 }
 
@@ -47,8 +52,19 @@ internal void Win32UpdateWindow(
     int Height
 ) {
     StretchDIBits(
-        DeviceContext, X, Y, Width, Height, X, Y, Width, Height, BitmapMemory,
-        &BitmapInfo, DIB_RGB_COLORS, SRCCOPY
+        DeviceContext,
+        X,
+        Y,
+        Width,
+        Height,
+        X,
+        Y,
+        Width,
+        Height,
+        BitmapMemory,
+        &BitmapInfo,
+        DIB_RGB_COLORS,
+        SRCCOPY
     );
 }
 
@@ -138,7 +154,6 @@ int WINAPI wWinMain(
         // TODO: Handle Failure
     }
 
-    // clang-format off
     HWND WindowHandle = CreateWindowEx(
         0,
         windowClass.lpszClassName,
@@ -151,8 +166,8 @@ int WINAPI wWinMain(
         0,
         0,
         Instance,
-        0);
-    // clang-format on
+        0
+    );
 
     if (!WindowHandle) {
         // TODO: Handle Failure
