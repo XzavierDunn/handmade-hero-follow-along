@@ -25,6 +25,18 @@ internal void RenderGradient(
             uint8_t Blue = (x + xOffset);
             uint8_t Green = (y + yOffset);
 
+            //        A        R        G        B
+            // Pixel: 00000000 00000000 00000000 00000000
+            // x86 uses little-endian which stores least significant byte first
+            // So when stored in memory these values are opposite
+            // Memory: [B] [G] [R] [A]
+            // Throw green bits into first byte
+            // 00000000 00000000 00000000 11111110
+            // Shift "<<" green bits into second byte
+            // 00000000 00000000 11111110 00000000
+            // bitwise OR "|" blue bits into the first byte of the Pixel's 32
+            // bits to prevent overwritting green's bits in the second byte
+            // 00000000 00000000 11111110 00001111
             *Pixel++ = ((Green << 8) | Blue);
         }
 
