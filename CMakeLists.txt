@@ -1,3 +1,4 @@
+# https://clang.llvm.org/docs/HowToSetupToolingForLLVM.html
 # Commands:
 ## Generate compile_commands.json file
 # - cmake -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -B build
